@@ -1,0 +1,35 @@
+1. KeyBoard Input
+using Scanner 
+Scanner sc = new Scanner(System.in);
+using BufferedReader
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+using console
+Console console=new Console()
+
+2. File Input
+using Scanner
+Scanner sc = new Scanner(new File("data.txt");
+while (sc.hasNextLine()) 
+{ String line = sc.nextLine(); System.out.println(line); }
+
+using BufferedReader
+BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+String line;
+while ((line = br.readLine()) != null) 
+{ System.out.println(line); }
+
+3. Command Output (Process Input)
+using buffered reader 
+BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+using Scanner 
+Scanner sc = new Scanner(process.getInputStream());
+
+4. Network Input (Sockets)
+BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+
+
+
+
+
