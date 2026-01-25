@@ -1,0 +1,23 @@
+class Solution {
+    public int largestElement(int[] nums) {
+       int largest=nums[0];
+       for(int i=1;i<nums.length;i++)
+       {
+        if(nums[i]>largest)
+        largest=nums[i];
+       }
+
+       return largest;
+
+    
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int array []= {1,2,3,4,5,6,7,78,9,10};
+        Solution solution=new Solution();
+        System.out.println(solution.largestElement(array));
+      
+    }
+}
