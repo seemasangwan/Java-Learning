@@ -1,0 +1,73 @@
+/*
+1. Syterm.in --> read raw byte data 
+2. InputStreamReader --> convert byte into characters
+3. BufferedReader --> use buffer for fast and efficent reading 
+Buffering --> instead of reading one char at a time (slow) data is read into temporary storage called buffer. It reduce direct IO operations , making reading efficient and fatser 
+Line Based Reading --> read line by line 
+4. Scanner --> token based reading token ( kind of one word) and do not use buffer 
+
+Important features of BufferReading 
+1. manual parsing is required ( String )
+2. faster and efficent reading 
+3. good for large data 
+4. java.io package 
+
+*/
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        // created object of BufferedReader Class
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        
+        // take integer type input from user 
+         System.out.println("Enter your integer value");
+        int size=Integer.parseInt(br.readLine());
+        System.out.println(size);
+        
+        // take String type input (ignore everthing after space , only one word input )
+       System.out.println("Enter your String word");
+       String name =br.readLine();
+       System.out.println(name);
+      
+       
+       // input complete line (including spaces)
+         System.out.println("Enter your String word with space");
+      String fullName =br.readLine();
+      System.out.println(fullName);
+       
+       // input boolen value
+         System.out.println("Enter your Boolean Value");
+      boolean booleanValue= Boolean.parseBoolean(br.readLine());
+      System.out.println(booleanValue);
+
+       
+      // inpuy double value 
+         System.out.println("Enter your double value");
+      double doubleValue=Double.parseDouble(br.readLine());
+      System.out.println(doubleValue);
+    }
+}
+
+/*
+Output:
+Enter your integer value
+4
+4
+Enter your String word
+seema
+seema
+Enter your String word with space
+seema sangwan
+seema sangwan
+Enter your Boolean Value
+false
+false
+Enter your double value
+545.767
+545.767
+*/
+
