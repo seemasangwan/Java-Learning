@@ -1,4 +1,13 @@
+/*
+System.in (inputStream ) work at  byte level 
+When you press keys, the keyboard sends bytes 
+To turn those bytes into readable text, you need a decoder like InputStreamReader or a wrapper like Scanner
+With System.in, you get raw bytes
+Console  : work at character level
+It already knows you want text, so you don’t need to wrap it in InputStreamReader
+With Console, you get characters directly 
 
+*/
 import java.io.Console;
 
 class Main {
