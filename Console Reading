@@ -1,0 +1,43 @@
+
+import java.io.Console;
+
+class Main {
+    public static void main(String[] args) {
+        // created object of Console Class
+           Console console= System.console();
+        // take integer type input from user 
+         System.out.println("Enter your integer value");
+        int size=Integer.parseInt(console.readLine());
+        System.out.println(size);
+        
+        // take String type input (ignore everthing after space , only one word input )
+       System.out.println("Enter your String word");
+       String name =console.readLine();
+       System.out.println(name);
+      
+       
+       // input complete line (including spaces)
+         System.out.println("Enter your String word with space");
+      String fullName =console.readLine();
+      System.out.println(fullName);
+       
+       // input boolen value
+         System.out.println("Enter your Boolean Value");
+      boolean booleanValue= Boolean.parseBoolean(console.readLine());
+      System.out.println(booleanValue);
+
+       
+      // inpuy double value 
+         System.out.println("Enter your double value");
+      double doubleValue=Double.parseDouble(console.readLine());
+      System.out.println(doubleValue);
+      
+      // read passowrd
+      System.out.println("Enter your password  value");
+      // readPassword()--> return array of char for security reasons
+      char [] passwordChars =console.readPassword();
+      String password = new String(passwordChars);
+       System.out.println(password);
+      
+    }
+}
