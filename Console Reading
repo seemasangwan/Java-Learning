@@ -41,3 +41,24 @@ class Main {
       
     }
 }
+/*
+output :
+Enter your integer value
+454
+454
+Enter your String word
+seema
+seema
+Enter your String word with space
+seema sangwan
+seema sangwan
+Enter your Boolean Value
+true
+true
+Enter your double value
+434.56768
+434.56768
+Enter your password  value
+
+strongpassword
+*/
