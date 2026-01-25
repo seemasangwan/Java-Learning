@@ -1,0 +1,116 @@
+/*Scanner Class in  Java is used to take input from user
+1. easy to use
+2. built in parsing 
+3. Good for beginner and journel apps 
+4. performance slow due ot parsing 
+5. package java.util */
+import java.util.Scanner;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        // created object of Scanner Class
+        Scanner sc =new Scanner(System.in);
+        
+        // take integer type input from user 
+         System.out.println("Enter your integer value");
+        int size=sc.nextInt();
+        System.out.println(size);
+        
+        // take String type input (ignore everthing after space , only one word input )
+       System.out.println("Enter your String word");
+       String name =sc.next();
+       System.out.println(name);
+      
+       
+       // input complete line (including spaces)
+         System.out.println("Enter your String word with space");
+      String fullName =sc.nextLine();
+      System.out.println(fullName);
+       
+       // input boolen value
+         System.out.println("Enter your Boolean Value");
+      boolean booleanValue=sc.nextBoolean();
+      System.out.println(booleanValue);
+
+       
+      // inpuy double value 
+         System.out.println("Enter your double value");
+      double doubleValue=sc.nextDouble();
+      System.out.println(doubleValue);
+    }
+}
+
+/*
+Output
+Enter your integer value
+4
+4
+Enter your String word
+seema
+seema
+Enter your String word with space
+
+Enter your Boolean Value
+true
+true
+Enter your double value
+34.767
+34.767
+
+why String with space is empty 
+reason: 
+sc.nextInt() → reads 4, but leaves the newline (\n) in the buffer.
+sc.next() → reads "seema", but again leaves the newline after "seema" in the buffer.
+Then you call sc.nextLine() for fullName.
+nextLine() reads everything up to the next newline.
+But since the newline is already sitting in the buffer (from pressing Enter after "seema"), nextLine() immediately consumes it and returns an empty string ("").
+
+
+Soultion 
+1. Always use nextLine and parse the values 
+ex 
+ // take integer type input from user 
+         System.out.println("Enter your integer value");
+        int size=Integer.parseInt(sc.nextLine());
+        System.out.println(size);
+        
+        // take String type input (ignore everthing after space , only one word input )
+       System.out.println("Enter your String word");
+       String name =sc.nextLine();
+       System.out.println(name);
+      
+       
+       // input complete line (including spaces)
+         System.out.println("Enter your String word with space");
+      String fullName =sc.nextLine();
+      System.out.println(fullName);
+       
+       // input boolen value
+         System.out.println("Enter your Boolean Value");
+      boolean booleanValue= Boolean.parseBoolean(sc.nextLine());
+      System.out.println(booleanValue);
+
+       
+      // inpuy double value 
+         System.out.println("Enter your double value");
+      double doubleValue=Double.parseDouble(sc.nextLine());
+      System.out.println(doubleValue);
+
+
+      output : 
+      Enter your integer value
+5
+5
+Enter your String word
+seema 
+seema 
+Enter your String word with space
+seema sangwan
+seema sangwan
+Enter your Boolean Value
+true
+true
+Enter your double value
+665.89
+665.89
+*/
