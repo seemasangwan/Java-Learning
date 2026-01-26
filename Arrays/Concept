@@ -6,6 +6,7 @@ ex (int , float , long , boolean , double( etc
 3. Memory managmenet : store element in continuous memory location 
 easy to access by index;
 4. Arrays in java are object themseleves and inherit from java.lang.object 
+5. can store both primitive and object
 
 
 ======================Declaration===============
