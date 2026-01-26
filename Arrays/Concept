@@ -1,0 +1,61 @@
+Arrays 
+It srores value of same datatype
+1. Homogeneuous : array can only store element of same datatype 
+ex (int , float , long , boolean , double( etc
+2. Fixed length : size of array is always fix 
+3. Memory managmenet : store element in continuous memory location 
+easy to access by index;
+4. Arrays in java are object themseleves and inherit from java.lang.object 
+
+
+======================Declaration===============
+datatype arrayname [] =new datatype [size]
+ex
+int arr [] =new int [6]
+float arr[] =new float[8]
+String arr[]=new String[9]
+
+
+
+default values 
+1. int =0
+2. float =0.0
+3. boolean =false;
+4. String =""
+
+
+
+System.out.println(arr)
+type+hashcode(address ->hexadecimal)
+
+
+
+==========================IMPORTANT METHODS IN ARRAY=====================
+1. Arrays.sort(array) ---> sort array element in acending order 
+compartor applicable to object 
+
+2. Arrays.binarySearch(array, key)
+return index
+
+3. Arrays.toString(array)
+
+4.Arrays.equal(arr1,arr2)
+compare two array their content and length
+
+Array.fill(arra, value)
+assign value to all element of array
+
+Array.copyOf(original , size) 
+create new array of given size and copy element from original to new array 
+if size >original array size other elemetn would conatin deafult value
+
+Array.copyOfRange(original , start , end)
+create new array which conatin element from start to end 
+
+
+
+
+
+
+==================================IMPORTANT PROPERTY===================
+array.length -------> size of array 
