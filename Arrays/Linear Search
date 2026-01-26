@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+class Solution {
+    public int linearSearch(int nums[], int target) {
+      for(int i=0;i<nums.length;i++)
+      {
+        if(nums[i]==target)
+        return i;
+      }
+      return -1;
+	
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+         System.out.println("ENTER Array size: ");
+         int size=sc.nextInt();
+         int array[]= new int[size];
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<size;i++)
+         {
+             array[i]=sc.nextInt();
+         }
+         System.out.println("Enter Target element");
+         int target=sc.nextInt();
+        Solution solution=new Solution();
+        System.out.println("Element found at Index "+ solution.linearSearch(array,target));
+      
+    }
+}
+
+/*
+Output:
+ENTER Array size: 
+6
+Enter array elements: 
+1 4 9 11 20 35
+Enter Target element
+11
+Element found at Index 3
+*/
