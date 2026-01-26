@@ -1,0 +1,269 @@
+=============================================Integer==============================================================
+import java.util.ArrayList;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       
+         Scanner sc=new Scanner(System.in);
+         ArrayList<Integer> arrayList=new ArrayList<Integer>();
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<3;i++)
+         {
+             // add used to insert element in ArrayList
+            arrayList.add(sc.nextInt());
+         }
+    
+        System.out.println("Print ArrayList Element");
+        
+            for(int i=0;i<3;i++)
+         {
+             // get used to get element in ArrayList at index i 
+             System.out.println(arrayList.get(i));
+         }
+         
+         System.out.println("Enter element which you want to check ArrayList contains or not ");
+        int target=sc.nextInt();
+        
+         System.out.println("ArrayList contains target element "+ target +" "+ arrayList.contains(target));
+        
+         System.out.println("Print arraylist size "+  arrayList.size());
+
+         
+        
+    }
+}
+
+/*=============================outPut==========================================================*/
+/*
+Enter array elements: 
+1 3 5
+Print ArrayList Element
+1
+3
+5
+Enter element which you want to check ArrayList contains or not 
+3
+ArrayList contains target element 3 true
+Print arraylist size 3
+
+
+*/
+
+
+
+=========================================================STRING==================================================
+
+import java.util.ArrayList;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       
+         Scanner sc=new Scanner(System.in);
+         ArrayList<String> arrayList=new ArrayList<String>();
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<3;i++)
+         {
+             // add used to insert element in ArrayList
+            arrayList.add(sc.next());
+         }
+    
+        System.out.println("Print ArrayList Element");
+        
+            for(int i=0;i<3;i++)
+         {
+             // get used to get element in ArrayList at index i 
+             System.out.println(arrayList.get(i));
+         }
+         
+         System.out.println("Enter element which you want to check ArrayList contains or not ");
+        String target=sc.next();
+        
+         System.out.println("ArrayList contains target element "+ target +" "+ arrayList.contains(target));
+         
+        
+      System.out.println("Print arraylist size "+  arrayList.size());
+    }
+}
+
+/*=============================outPut==========================================================*/
+/*
+Enter array elements: 
+first second third 
+Print ArrayList Element
+first
+second
+third
+Enter element which you want to check ArrayList contains or not 
+First
+ArrayList contains target element First false
+Print arraylist size 3
+
+
+*/
+
+=========================================================FLOAT==================================================
+import java.util.ArrayList;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       
+         Scanner sc=new Scanner(System.in);
+         ArrayList<Float> arrayList=new ArrayList<Float>();
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<3;i++)
+         {
+             // add used to insert element in ArrayList
+            arrayList.add(sc.nextFloat());
+         }
+    
+        System.out.println("Print ArrayList Element");
+        
+            for(int i=0;i<3;i++)
+         {
+             // get used to get element in ArrayList at index i 
+             System.out.println(arrayList.get(i));
+         }
+         
+         System.out.println("Enter element which you want to check ArrayList contains or not ");
+        Float target=sc.nextFloat();
+        
+         System.out.println("ArrayList contains target element "+ target +" "+ arrayList.contains(target));
+         
+        
+      System.out.println("Print arraylist size "+  arrayList.size());
+    }
+}
+/*=============================outPut==========================================================*/
+/*
+Enter array elements: 
+2.3 4.5 6.7
+Print ArrayList Element
+2.3
+4.5
+6.7
+Enter element which you want to check ArrayList contains or not 
+6.7
+ArrayList contains target element 6.7 true
+Print arraylist size 3
+*/
+
+
+=========================================================Double==================================================
+
+import java.util.ArrayList;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       
+         Scanner sc=new Scanner(System.in);
+         ArrayList<Double> arrayList=new ArrayList<Double>();
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<3;i++)
+         {
+             // add used to insert element in ArrayList
+            arrayList.add(sc.nextDouble());
+         }
+    
+        System.out.println("Print ArrayList Element");
+        
+            for(int i=0;i<3;i++)
+         {
+             // get used to get element in ArrayList at index i 
+             System.out.println(arrayList.get(i));
+         }
+         
+         System.out.println("Enter element which you want to check ArrayList contains or not ");
+        double target=sc.nextDouble();
+        
+         System.out.println("ArrayList contains target element "+ target +" "+ arrayList.contains(target));
+         
+        
+      System.out.println("Print arraylist size "+  arrayList.size());
+    }
+}
+
+/*=============================outPut==========================================================*/
+/*
+Enter array elements: 
+2.435465 4.5767 7.87989945
+Print ArrayList Element
+2.435465
+4.5767
+7.87989945
+Enter element which you want to check ArrayList contains or not 
+3435.6768
+ArrayList contains target element 3435.6768 false
+Print arraylist size 3
+*/
+
+
+
+
+
+
+
+=========================================================Boolean==================================================
+
+import java.util.ArrayList;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       
+         Scanner sc=new Scanner(System.in);
+         ArrayList<Boolean> arrayList=new ArrayList<Boolean>();
+         System.out.println("Enter array elements: ");
+         for(int i=0;i<3;i++)
+         {
+             // add used to insert element in ArrayList
+            arrayList.add(sc.nextBoolean());
+         }
+    
+        System.out.println("Print ArrayList Element");
+        
+            for(int i=0;i<3;i++)
+         {
+             // get used to get element in ArrayList at index i 
+             System.out.println(arrayList.get(i));
+         }
+         
+         System.out.println("Enter element which you want to check ArrayList contains or not ");
+        boolean target=sc.nextBoolean();
+        
+         System.out.println("ArrayList contains target element "+ target +" "+ arrayList.contains(target));
+         
+        
+      System.out.println("Print arraylist size "+  arrayList.size());
+    }
+}
+
+/*=============================outPut==========================================================*/
+/*
+Enter array elements: 
+true true true
+Print ArrayList Element
+true
+true
+true
+Enter element which you want to check ArrayList contains or not 
+false
+ArrayList contains target element false false
+Print arraylist size 3
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
