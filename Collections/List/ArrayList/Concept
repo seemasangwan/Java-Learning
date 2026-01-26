@@ -1,0 +1,34 @@
+=================================================ArrayList==========================
+1. Dynamic in size ( can add or remove element )
+2. Can store only object not primtive datatypes 
+4. for primitive data type need to use their corresponding wrapper classes 
+int(Integer) , float (Float) , boolean (Boolean) etc
+3. continuous memory allocation
+5. ordered and index based access
+6. dupliaction element is allowed
+
+
+
+
+
+
+
+==============================DECLARATION=====================================
+
+ArrayList<Object> arrayname=new ArrayList<Object>();
+Example
+ArrayList<Integer> intArrayList= new ArrayList<Integer>();
+ArrayList<Float> floatArrayList=new ArrayList<Float>();
+ArrayList<Boolean> booleanArrayList=new ArrayList<Boolean>();
+
+
+
+
+
+
+
+
+
+
+=================IMPORTANT METHODS FOR ARRARYLIST=================================
+1. 
