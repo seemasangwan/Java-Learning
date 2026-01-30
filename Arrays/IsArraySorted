@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Solution {
+    public boolean isSorted(ArrayList<Integer> nums) {
+       if(nums.size()<=1) return true;
+       for(int i=1;i<nums.size();i++)
+       {
+        if(nums.get(i)<nums.get(i-1))
+        return false;
+       }
+       return true;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Solution solution =new Solution();
+        System.out.println("Enter your array size ");
+        int size =sc.nextInt();
+        ArrayList<Integer>array=new ArrayList<Integer>();
+        System.out.println("Enter your array element ");
+        for(int i=0;i<size;i++)
+        {
+            array.add(sc.nextInt());
+        }
+        System.out.println("Is Array sorted " + solution.isSorted(array));
+       
+    }
+}
+
+/*
+Enter your array size 
+5
+Enter your array element 
+2 4 7 8 9
+Is Array sorted true
+
+Enter your array size 
+3
+Enter your array element 
+2 4 1
+Is Array sorted false
+*/
