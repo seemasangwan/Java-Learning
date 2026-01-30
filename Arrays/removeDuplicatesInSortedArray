@@ -1,0 +1,49 @@
+
+import java.util.Scanner;
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length<=1) return nums.length;
+        int left=0,right=1;
+        while(right<nums.length)
+        {
+            if(nums[left]!=nums[right])
+            {
+                left++;
+                nums[left]=nums[right];
+                
+            }
+            right++;
+        }
+        return left+1;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Solution solution =new Solution();
+        System.out.println("Enter your array size ");
+        int size =sc.nextInt();
+       int array [] =new int [size];
+        System.out.println("Enter your array element ");
+        for(int i=0;i<size;i++)
+        {
+            array[i]=sc.nextInt();
+        }
+        int uniqueElement =solution.removeDuplicates(array);
+        System.out.println("Print Unique elements");
+        for(int i=0;i<uniqueElement;i++)
+        {
+            System.out.print(array[i]+" ");
+        }
+       
+    }
+}
+
+/*
+Enter your array size 
+4
+Enter your array element 
+1 1 3 4
+Print Unique elements
+1 3 4 
+*/
