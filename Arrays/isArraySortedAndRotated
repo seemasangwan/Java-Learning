@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+class Solution {
+    public boolean isArraySortedAndRotated(int[] nums) {
+      int peak=0;
+      for(int i=1;i<nums.length;i++)
+      {
+        if(nums[i]<nums[i-1])
+        peak++;
+      }
+
+      if(nums[0]<nums[nums.length-1])
+      peak++;
+
+      return peak>1?false:true;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Solution solution =new Solution();
+        System.out.println("Enter your array size ");
+        int size =sc.nextInt();
+       int array [] =new int [size];
+        System.out.println("Enter your array element ");
+        for(int i=0;i<size;i++)
+        {
+            array[i]=sc.nextInt();
+        }
+        System.out.println("Is Array sorted and Rotated " + solution.isArraySortedAndRotated(array));
+       
+    }
+}
+
+/*
+Enter your array size 
+5
+Enter your array element 
+5 1 2 3 4
+Is Array sorted and Rotated true
+
+
+Enter your array size 
+5
+Enter your array element 
+4 5 1 2 0
+Is Array sorted and Rotated false
+*/
