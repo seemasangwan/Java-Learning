@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+class Main {
+    public static void main(String[] args) {
+       HashMap<String , String>map=new HashMap<String,String>();
+       // how to insert values in map
+       map.put("key1","value1");
+       map.put("key2","value2");
+       // how to print map data
+       System.out.println(map);
+       
+       // how to search partiluar value its in map or not 
+       // containskey --> true if exist . false if does Not exist
+       System.out.println(map.containsKey("key1"));
+       System.out.println(map.containsKey("key3"));
+
+       // how to get value of praticluar key from map 
+       // get(key) ---> value if key exist
+       // return null if key does not exist
+       System.out.println(map.get("key1"));
+       System.out.println(map.get("key3"));
+
+       
+       // how to travers in map 
+       //1 using entrySet
+        System.out.println("Traverse in map using entrySet()");
+       for(Map.Entry<String,String>ele:map.entrySet())
+       {
+            System.out.println("element is "+ele.getKey()+" : "+ele.getValue());
+       }
+       //2. usingkeyset
+     System.out.println("Traverse in map using keySet()");
+
+       for(String key:map.keySet())
+       {
+            System.out.println("element is "+key+" : "+map.get(key));
+ 
+       }
+    }
+}
