@@ -1,0 +1,69 @@
+String is a non-primitive Data Type in java 
+String is a class in java
+String are immutuable in java 
+
+How to take input from user use Scanner class
+1. one word : sc.next()
+2. complete sentence including space : sc.nextLine();
+
+=========================Important Methods of string=====================
+1. length() : it return the number of chars string contains
+example : s1.length();
+
+2. concatenation : combine two strings 
+s1+s2
+
+3.charAt(index): return  the char present at given index
+ex s1.charAt(i)
+
+4. compareTo(String) : compare to string and return int value
+example s1.compareTo(s2)
+i) postive : if s1>s2
+ii) equal : if s1==s2
+iii) negative : if s1<s2
+always use compareTo method to compare to string 
+equal also works but use comapreTo
+
+5. subString(startindex , endindex)
+endindex is exlusive 
+ex s1.subString(4,6)
+return string of char present at 4,5th index
+
+
+Strings are immutable 
+cannot be modify , deleted once its created 
+every time it will create new object in memory if we modify string and which take time
+
+
+==================================StringBuilder==============================
+With the help of StringBuilder string we can modify string  without creation of new objec
+
+Declaration of StringBuilder
+
+StringBuilder s=new StringBuilder("seema");
+
+// we can not directly take input from user into StringBuilder object itself from System.in
+as it return primitive types or String Object 
+
+
+=============================Some Extra methods of StringBuilder=======================
+1. setCharAt(idx , value ): set char at idx 
+example s1.setCharAt(3,'s');
+
+2. insert(idx,string): 
+insert string a idx 
+example :
+s1.insert(1,"sangwan")
+
+3. delete(start,end)
+end is exlusive
+delete from start to end-1
+example s1.delete(3,6); // 345
+
+4. append(string)
+append a string in the end
+s1.append("sangwan")
+
+5. length()--> return length;
+6. charAt(i) --> return char at given index;
+
