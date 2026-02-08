@@ -32,11 +32,66 @@ class Main {
        }
        //2. usingkeyset
      System.out.println("Traverse in map using keySet()");
-
-       for(String key:map.keySet())
+    
+     for(String key:map.keySet())
        {
             System.out.println("element is "+key+" : "+map.get(key));
  
-       }
+      }
+      
+       // 3. traverse using value
+        System.out.println("Traverse in map using values()");
+   for(String val:map.values())
+   {
+       System.out.println(val);
+   }
+     
+     // how to remove element 
+    System.out.println("how to remove element ");
+    System.out.println(map.remove("key2"));
+   System.out.println(map.remove("key3"));
+   System.out.println(map);
+   
+  
+   // how to get map size 
+    System.out.println("how to get map size ");
+   System.out.println(map.size());
+   
+   // how to remove all element
+    System.out.println("how to remove all element ");
+
+   map.clear();
+      System.out.println(map);
+
     }
 }
+
+
+
+/* ========================OutPut==============================
+
+
+{key1=value1, key2=value2}
+true
+false
+value1
+null
+Traverse in map using entrySet()
+element is key1 : value1
+element is key2 : value2
+Traverse in map using keySet()
+element is key1 : value1
+element is key2 : value2
+Traverse in map using values()
+value1
+value2
+how to remove element 
+value2
+null
+{key1=value1}
+how to get map size 
+1
+how to remove all element 
+{}
+
+*/
