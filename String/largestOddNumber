@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+class Solution {
+    public String largestOddNumber(String num) {
+        for(int i=num.length()-1;i>=0;i--)
+        {
+            int n= num.charAt(i)-'0';
+            if(n%2==1)
+            {
+                return num.substring(0,i+1);
+            }
+        }
+        return "";
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your   String");
+       String s=sc.nextLine();
+       System.out.print("largestOddNumber in  string ");
+       Solution sol=new Solution();
+       String res=sol.largestOddNumber(s);
+        System.out.println(res);
+    }
+}
+/*
+===========================Output=======================
+Enter your   String
+4646568793
+largestOddNumber in  string 4646568793
+*/
