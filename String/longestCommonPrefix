@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+       String res=strs[0];
+       for(int i=1;i<strs.length;i++)
+       {
+         int j=0,k=0;
+         while(j<res.length()&&k<strs[i].length())
+         {
+            if(strs[i].charAt(k)!=res.charAt(j))
+            break;
+            j++;
+            k++;
+         }
+         res=res.substring(0,j);
+       }
+       return res;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your String array length ");
+       int size =sc.nextInt();
+       sc.nextLine();
+       String arr[]= new String[size];
+       System.out.println("Enter  string array  elements ");
+       for(int i=0;i<size;i++)
+       {
+           arr[i]=sc.nextLine();
+       }
+       Solution sol=new Solution();
+         System.out.println("longestCommonPrefix is " + sol.longestCommonPrefix(arr));
+    }
+}
+/*
+==================output=================
+Enter your String array length 
+5
+Enter  string array  elements 
+fly
+flower
+flying
+flyover 
+flight
+longestCommonPrefix is fl
+*/
