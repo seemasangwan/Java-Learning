@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+class Solution {
+    public String reverseWords(String s) {
+        String res="";
+        String temp="";
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)==' ')
+
+            {
+                if(temp.length()>0)
+                res=temp+" "+res;     
+                temp="";
+
+            }
+            else temp=temp+s.charAt(i);
+            
+        }
+        if(!temp.isEmpty())
+        res=temp+" "+res;
+       return res.trim();
+
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your   String");
+       String s=sc.nextLine();
+       System.out.print("reverseWords string ");
+       Solution sol=new Solution();
+       String res=sol.reverseWords(s);
+        System.out.println(res);
+    }
+}
+/*
+===================Output=========================
+
+
+Enter your   String
+My name is seema sangwan 
+reverseWords string sangwan seema is name My
+
+
+*/
