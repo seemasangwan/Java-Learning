@@ -1,0 +1,58 @@
+HashMap :
+It stores element in key:value pair 
+Keys are unique 
+It is part of java Collection Framework
+It is part of java.util package
+It implements Map interface
+In hashmap we access element using key 
+o(1) time complexity for loopkup , insert and deletion
+Unordered map 
+keys and values in hashmap are object
+to use map for premitive datatype we have to use Wrapper class 
+example int -->Integer
+  float-->Float 
+  
+
+
+// how to create map 
+import java.util.HashMap
+HashMap<dataType,dataType>map=new HashMap<dataType, dataType>();
+
+// how insert element in HashMap: using put("key","value") method
+map.put(key,value)
+
+// how to get element in HashMap: we access element using key and get(key) method
+map.get(key)
+// return value if key present 
+// return null if key does not present 
+
+// how to remove an element from map
+map.remove(key) : it will remove the element if key present  and return value
+// will return null if key not present 
+
+
+// how to remove all item : clear() method
+map.clear() // remove all elements from map
+map.size() // return size of map
+
+
+// how to traverse in map
+// using entrySet()
+  for(Map.Entry<String ,String>ele:map.entrySet())
+  {
+  ele.getKey();
+  ele.getValue();
+  
+  }
+// using keySet()
+  for(String key:map.keySet())
+  
+// using values()
+for(String val:map.values())
+
+// Key
+
+
+
+
+
