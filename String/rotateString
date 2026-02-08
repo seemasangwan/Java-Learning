@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+class Solution {
+    public boolean rotateString(String s, String goal) {
+        if(s.length()!=goal.length()) return false;
+      s=s+s;
+      for(int i=0;i<s.length()-goal.length();i++)
+      {
+        String temp=s.substring(i,goal.length()+i);
+        if(temp.compareTo(goal)==0)
+        return true;
+      }
+      return false;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your String s1 ");
+       String s1=sc.nextLine();
+       System.out.println("Enter another string s2 ");
+       String s2=sc.nextLine();
+       Solution sol=new Solution();
+         System.out.println("s2 is roated   string of s1 " + sol.rotateString(s1,s2));
+    }
+}
+/*
+=======================output==========================
+Enter your String s1 
+seema
+Enter another string s2 
+eemas
+s2 is roated   string of s1 true
+
+Enter your String s1 
+seema
+Enter another string s2 
+eemar
+s2 is roated   string of s1 false
+
+*/
