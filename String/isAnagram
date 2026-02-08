@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length()!=t.length()) return false;
+        int arr1[]=new int[26];
+        int arr2[]=new int[26];
+        for(int i=0;i<s.length();i++)
+        {
+            arr1[s.charAt(i)-'a']++;
+            arr2[t.charAt(i)-'a']++;
+        }
+        for(int i=0;i<26;i++)
+        {
+            if(arr1[i]!=arr2[i])
+            return false;
+        }
+        return true;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your String s1 ");
+       String s1=sc.nextLine();
+       System.out.println("Enter another string s2 ");
+       String s2=sc.nextLine();
+       Solution sol=new Solution();
+         System.out.println("s1 and s2 isAnagram " + sol.isAnagram(s1,s2));
+    }
+}
+/*
+==============================Output===============================
+Enter your String s1 
+abcabcabc
+Enter another string s2 
+aabbccabc
+s1 and s2 isAnagram true
+
+
+
+Enter your String s1 
+abc
+Enter another string s2 
+bcd
+s1 and s2 isAnagram false
+
+*/
