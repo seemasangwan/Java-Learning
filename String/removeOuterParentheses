@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+class Solution {
+    public String removeOuterParentheses(String s) {
+   String ans="";
+   int count=0;
+   for(int i=0;i<s.length();i++)
+   {
+    if(s.charAt(i)=='(')
+    {
+        count++;
+        if(count>1)
+        ans+='(';
+    }
+    else
+    {
+         count--;
+        if(count>0)
+        ans+=')';
+    }
+   }
+    return ans;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your valid parenthesis String");
+       String s=sc.nextLine();
+       System.out.print("String after removing outermost parenthesis ");
+       Solution sol=new Solution();
+       String res=sol.removeOuterParentheses(s);
+        System.out.println(res);
+    }
+}
+
+/*============================Output================================*/
+/*
+Enter your valid parenthesis String
+(()())
+String after removing outermost parenthesis ()()
+
+
+Enter your valid parenthesis String
+((()))(()())()
+String after removing outermost parenthesis (())()()
+*/
