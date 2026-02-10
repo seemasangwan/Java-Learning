@@ -1,0 +1,29 @@
+class Solution {
+    public int longestBalanced(String S) {
+      HashMap<Character,Integer>count=new HashMap<>();
+      int ans=0;
+      for(int i=0;i<S.length();i++)
+      {
+        count.clear();
+        for(int j=i;j<S.length();j++)
+        {
+            count.put(S.charAt(j),count.getOrDefault(S.charAt(j),0)+1);
+            int freq=count.get(S.charAt(j));
+            boolean poss=true;
+            for(int val :count.values())
+            {
+                if(val!=freq)
+                {
+                    poss=false;
+                    break;
+                }
+            }
+            if(poss==true)
+            ans=Math.max(ans,j-i+1);
+        }
+         count.put(S.charAt(i),count.get(S.charAt(i))-1);
+         if(count.get(S.charAt(i))==0) count.remove(S.charAt(i));
+      } 
+      return ans; 
+    }
+}
