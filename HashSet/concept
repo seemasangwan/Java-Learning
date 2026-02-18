@@ -1,0 +1,48 @@
+HashSet: it is collection which stores unique element uisng  hash table 
+It implements set interface
+Avergae Time Complexity  to add , remove and search element in hashset is o(1)
+import java.util.HashSet;
+HashSet<DataType>name=new HashSet<>();
+example
+HashSet<Integer>set=new HashSet<>();
+
+=============================Important methods===============
+add() --------------> to insert element in set
+set.add(element);
+
+conatins()-------------------> to search element in set
+set.contains(element) ;
+  
+
+remove() ------------------> to delete element from set
+set.remove(element);
+
+clear()-------------------> to remove all element from set
+set.clear();
+
+size() -----------------> return number of unique element present in set
+set.size()
+
+
+==========================How To travserse element in HashSet===================
+
+
+  1) using for loop
+ for(datatype element: setname)
+
+import java.util.Iterator
+  2) using iterator 
+Iterator it=set.iterator()
+
+// hashNext()
+// next()
+
+while(it.hashNext())
+{
+  print(it.next())
+}
+
+  
+
+
+
