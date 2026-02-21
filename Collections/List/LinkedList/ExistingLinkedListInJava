@@ -1,0 +1,12 @@
+varaible 
+first --> point to first node
+last --> point to last node
+
+
+Methods
+1) addFirst(ele) --> add element in beigining of linkedlist
+2) addLast(ele) --> add element at the end of the linkedlist
+3) size() --> return size of linkedlist
+4) add(ele) --> add element at the end of the linkedlist
+5)
+
