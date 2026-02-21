@@ -1,0 +1,157 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main{
+public static void main(String[] args)
+    {
+       LinkedList list=new LinkedList();
+       list.addAtFront(45);
+       list.addAtFront(35);
+       list.addAtEnd(32);
+        list.addAtFront(47);
+        list.addAtFront(24);
+                 list.addAtEnd(67);
+       list.printlist();
+       list.size();
+       list.deleteFromFront();
+          list.printlist();
+       list.size();
+       list.deleteFromLast();
+       list.printlist();
+       list.size();
+       
+       list.addAtFront(23);
+       list.addAtEnd(87);
+        list.printlist();
+       list.size();
+       
+       list.deleteNode( 23);
+        list.printlist();
+       list.size();
+       
+       
+            list.deleteNode( 87);
+        list.printlist();
+       list.size();
+           list.deleteNode( 35);
+        list.printlist();
+       list.size();
+       
+       
+      
+    }
+}
+
+class LinkedList{
+   
+  class Node{
+    int data;
+    Node next;
+    public Node(int data)
+    {
+        this.next=null;
+        this.data=data;
+    }
+}
+
+Node head;
+    
+   
+    public void  addAtFront(int data)
+    {
+        Node newnode=new Node(data);
+        if(head==null)  
+        {head=newnode;}
+        else 
+        {newnode.next=head;
+        head=newnode;}
+    }
+    
+    public void addAtEnd(int data)
+    {
+        Node newnode=new Node(data);
+        Node temp=head;
+        if(head==null){ head=newnode; return;}
+        while(temp.next!=null)
+        {
+            temp=temp.next;
+        }
+        temp.next=newnode;
+    }
+    
+    public void printlist()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+    }
+    public int size()
+    {
+        int ans=0;
+       Node temp=head;
+        while(temp!=null)
+        {
+           ans++;
+            temp=temp.next;
+        } 
+        System.out.println();
+        System.out.println("size of list is "+ans);
+        return ans;
+    }
+    
+    public void deleteFromFront()
+    {
+        if(head==null) return;
+        head=head.next;
+       
+    }
+    
+    public void deleteFromLast()
+    {
+        Node temp=head;
+        Node prev=null;
+        while(temp.next!=null)
+        {
+            prev=temp;
+            temp=temp.next;
+        }
+        if(prev==null)
+        {
+            head=null;
+        }
+        else
+        {
+            prev.next=null;
+        }
+        
+    
+        
+    }
+    public void deleteNode(int data)
+    {
+        if(head==null) return;
+        
+        // 1 2 3 4 5 6 7
+        Node temp=head;
+        Node prev=null;
+        while(temp.next!=null&&temp.data!=data)
+        {
+            prev=temp;
+            temp=temp.next;
+        }
+        if(prev==null)
+        {
+            head=head.next;
+            return;
+        }
+        if(temp==null)
+        {
+            return;
+        }
+        prev.next=temp.next;
+    }
+}
+
