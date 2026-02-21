@@ -19,3 +19,17 @@ Methods
 13) get(pos) --> return element present at given positiom 
 14) set(pos,value) --> set the value of ele present at given post and return old value
 15) add (pos,ele) --> add element at given position
+
+
+
+How to iterate in given linkedlis 
+1) using for loop
+for(int i=0;i<ll.size();i++)
+{
+print(ll.get(i));
+}
+2) using for each loop
+for(datatype ele:ll)
+{
+print(ele);
+}
