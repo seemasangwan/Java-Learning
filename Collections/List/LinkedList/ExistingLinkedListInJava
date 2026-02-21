@@ -8,5 +8,14 @@ Methods
 2) addLast(ele) --> add element at the end of the linkedlist
 3) size() --> return size of linkedlist
 4) add(ele) --> add element at the end of the linkedlist
-5)
-
+5) removeFirst()--> remove element from beigining of linkedlist &  return removed element 
+6) removeLast() --> remove element from the end of the linkedlist &  return removed element 
+7) remove(ele) --> remove  first occuracnce element if its present in linkedlist &  return removed element 
+8) remove(position)--> remove element present at particilar postion &  return removed element 
+9) remove() --> remove last element  &  return removed element 
+10) contains(ele) --> return true of elemenet present in list else false
+11) getFirst() --> return first element
+12) getLast()--> return last element
+13) get(pos) --> return element present at given positiom 
+14) set(pos,value) --> set the value of ele present at given post and return old value
+15) add (pos,ele) --> add element at given position
