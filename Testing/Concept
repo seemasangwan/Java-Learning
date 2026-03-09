@@ -15,3 +15,15 @@ Mocking Framework
 
 Assertion Framework 
 1. AssertJ
+
+
+Advantage of unit testing
+1. early bug detection
+2. refactor confidently if you change code , uni test will warn if something break -- don't break feature silently
+3. Documention : unit show how a method behaves
+4. save cost : fixing bug during developemtn is cheaper than fixing after  goes app live
+
+Integration : testing of multiple module together
+Functional testing : end to end testing of a feature 
+
+
