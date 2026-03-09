@@ -1,0 +1,17 @@
+There are different type of test to check functionality of our system /code
+1. unit testing : test beaviour of class in isloation enviroment
+2. Integration Testing: test interaction between multiple classes
+3. e2e : test end to end flow 
+
+
+Testing Framework
+1. Junit
+2. TestNG
+
+Mocking Framework
+1. Mockito
+2.Jmock
+3.EasyMock
+
+Assertion Framework 
+1. AssertJ
